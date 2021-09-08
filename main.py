@@ -20,3 +20,15 @@ length_list = len(list)
 
 for i in range(length_list):
     table.rows.append([list[i]])
+
+table.columns.header = [country.title()]
+table.rows.header = ["Coronavirus Cases:", "Deaths:", "Recovered:"]
+table.set_style(BeautifulTable.STYLE_BOX_ROUNDED)
+localtime = time.asctime(time.localtime(time.time()))
+print("\n --- "+localtime+" ---")
+print("")
+print(table)
+input()
+
+
+# Made By Yasin Rezvani
