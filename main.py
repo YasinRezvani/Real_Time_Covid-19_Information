@@ -16,10 +16,8 @@ for i in data:
     regex = re.sub("\s+" , " " , i.text).strip()
     list.append(regex)
 
-length_list = len(list)
-
-for i in range(length_list):
-    table.rows.append([list[i]])
+for i in list:
+    table.rows.append([i])
 
 table.columns.header = [country.title()]
 table.rows.header = ["Coronavirus Cases:", "Deaths:", "Recovered:"]
