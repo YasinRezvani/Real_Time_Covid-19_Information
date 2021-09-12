@@ -6,6 +6,9 @@ from beautifultable import BeautifulTable
 
 table = BeautifulTable()
 country = input("\n Enter Country: ").lower()
+localtime = time.asctime(time.localtime(time.time()))
+print("\n --- "+localtime+" ---")
+print("")
 url = "https://www.worldometers.info/coronavirus/country/" + country
 req = requests.get(url)
 scrap = bs(req.content , "html.parser")
@@ -22,9 +25,6 @@ for i in list:
 table.columns.header = [country.title()]
 table.rows.header = ["Coronavirus Cases:", "Deaths:", "Recovered:"]
 table.set_style(BeautifulTable.STYLE_BOX_ROUNDED)
-localtime = time.asctime(time.localtime(time.time()))
-print("\n --- "+localtime+" ---")
-print("")
 print(table)
 input()
 
