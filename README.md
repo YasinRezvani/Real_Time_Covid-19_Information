@@ -1,6 +1,6 @@
 
 # Real_Time_Covid-19_Information
-The simple terminal version to get data covid-19 in real time update and i get data from scraping [Worldometers](https://worldometers.info/) website
+The simple CLI program to get data covid-19 in real time update and i get data from scraping [Worldometers](https://worldometers.info/) website
 # Install the requirements
 First you should install the requirements:
 ```
